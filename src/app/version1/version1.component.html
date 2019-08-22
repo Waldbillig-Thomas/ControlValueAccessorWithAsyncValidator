@@ -1,1 +1,23 @@
-<p>version1 works!</p>
+<form [formGroup]="form">
+  <table>
+    <legend>
+      custom component
+    </legend>
+    <tr>
+      <th><label for="a">a</label></th>
+      <td><input name="a" formControlName="a" /></td>
+    </tr>
+    <tr>
+      <th><label for="b">b</label></th>
+      <td><input name="b" formControlName="b" /></td>
+    </tr>
+    <tr>
+      <th>status</th>
+      <td>{{ form.status }}</td>
+    </tr>
+    <tr>
+      <th>value</th>
+      <td>{{ form.value | json }}</td>
+    </tr>
+  </table>
+</form>

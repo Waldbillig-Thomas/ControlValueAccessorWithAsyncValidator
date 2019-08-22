@@ -1,1 +1,33 @@
 <router-outlet></router-outlet>
+
+<form [formGroup]="form1">
+  <table>
+    <legend>
+      parent form
+    </legend>
+    <tr>
+      <th>
+        <label for="field1">field 1</label>
+      </th>
+      <td>
+        <input name="field1" type="text" formControlName="field1" />
+      </td>
+    </tr>
+    <tr>
+      <th>
+        <label for="field2">field 2</label>
+      </th>
+      <td>
+        <app-version1 name="field2" formControlName="field2"></app-version1>
+      </td>
+    </tr>
+    <tr>
+      <th>status</th>
+      <td>{{ form1.status }}</td>
+    </tr>
+    <tr>
+      <th>value</th>
+      <td>{{ form1.value | json }}</td>
+    </tr>
+  </table>
+</form>
